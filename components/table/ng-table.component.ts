@@ -21,7 +21,7 @@ import {NgTableSorting} from './ng-table-sorting.directive';
       </thead>
       <tbody>
       <tr *ngFor="#row of rows">
-        <td *ngFor="#column of columns">{{row[column.name]}}</td>
+        <td *ngFor="#column of columns">{{column.formatter ? column.formatter(row[column.name], row) : row[column.name]}}</td>
       </tr>
       </tbody>
     </table>
