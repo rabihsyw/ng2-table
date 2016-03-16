@@ -67,11 +67,7 @@ export class NgTable {
 
   ngOnInit() {
 
-    this.tableChanged.emit(
-        {
-          init : this.config
-        }
-    );
+    this.tableChanged.emit();
   }
 
   onChangeTable(column:any) {
