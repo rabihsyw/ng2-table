@@ -76,14 +76,12 @@ export class NgTable {
         this.tableChanged.emit(null);
     }
 
-    clearColumnsSort(column : any) {
+    clearColumnsSort(_column : any) {
 
         this.columns.forEach(
-            (_column) => {
-
-                if (column.name != _column.name) {
-
-                    _column.sort = "";
+            (column) => {
+                if (_column.name !== column.name) {
+                    column.sort = null
                 }
             }
         );
