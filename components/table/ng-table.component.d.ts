@@ -8,5 +8,6 @@ export declare class NgTable {
     configColumns: {
         columns: any[];
     };
+    ngOnInit(): void;
     onChangeTable(column: any): void;
 }

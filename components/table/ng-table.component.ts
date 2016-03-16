@@ -65,6 +65,15 @@ export class NgTable {
     return {columns: sortColumns};
   }
 
+  ngOnInit() {
+
+    this.tableChanged.emit(
+        {
+          init : this.config
+        }
+    );
+  }
+
   onChangeTable(column:any) {
     this.columns = [column];
     this.tableChanged.emit({sorting: this.configColumns});
