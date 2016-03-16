@@ -8,7 +8,7 @@ import {NgTableSorting} from './ng-table-sorting.directive';
   inputs: ['rows', 'columns', 'config'],
   outputs: ['tableChanged'],
   template: `
-    <table class="table table-striped table-bordered dataTable"
+    <table [attr.class]="config && config.class ? config.class : 'table table-striped table-bordered dataTable'"
            role="grid" style="width: 100%;">
       <thead>
       <tr role="row">

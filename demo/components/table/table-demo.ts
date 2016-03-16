@@ -17,12 +17,12 @@ let template = require('./table-demo.html');
 export class TableDemo implements OnInit {
   public rows:Array<any> = [];
   public columns:Array<any> = [
-    {title: 'Name', name: 'name'},
+    {title: 'Name', name: 'name', formatter : function (cell, row) { return "<span style='color: red'>" + cell +" </span>";}},
     {title: 'Position', name: 'position', sort: false},
     {title: 'Office', name: 'office', sort: 'asc'},
     {title: 'Extn.', name: 'ext', sort: 'desc'},
     {title: 'Start date', name: 'startDate'},
-    {title: 'Salary', name: 'salary'}
+    {title: 'Salary', name: 'salary', formatter : function (cell, row) { return cell + " $";}}
   ];
   public page:number = 1;
   public itemsPerPage:number = 10;
@@ -33,7 +33,8 @@ export class TableDemo implements OnInit {
   public config:any = {
     paging: true,
     sorting: {columns: []},
-    filtering: {filterString: '', columnName: 'position'}
+    filtering: {filterString: '', columnName: 'position'},
+    class : "table table-hover table-light"
   };
 
   private data:Array<any> = TableData;
