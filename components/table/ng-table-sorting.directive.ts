@@ -22,7 +22,7 @@ export class NgTableSorting {
             event.preventDefault();
         }
 
-        this.clearSort.emit(null);
+        this.clearSort.emit(this.column);
 
         if (this.config && this.column && this.column.sort !== false) {
             switch (this.column.sort) {
