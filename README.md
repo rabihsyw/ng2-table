@@ -1,6 +1,8 @@
 # ng2-table [![npm version](https://badge.fury.io/js/ng2-table.svg)](http://badge.fury.io/js/ng2-table)
 Simple table extension with sorting, filtering, paging... for Angular2 apps
 
+# This fork adds the ability to add columns formatter.
+
 Follow me at [twitter](https://twitter.com/valorkin) to be notified about new releases.
 
 [![Code Climate](https://codeclimate.com/github/valor-software/ng2-table/badges/gpa.svg)](https://codeclimate.com/github/valor-software/ng2-table)
