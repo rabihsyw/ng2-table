@@ -3,5 +3,6 @@ export declare class NgTableSorting {
     config: any;
     column: any;
     sortChanged: EventEmitter<any>;
+    clearSort: EventEmitter<any>;
     onToggleSort(event: any): void;
 }
