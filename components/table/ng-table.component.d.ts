@@ -9,6 +9,6 @@ export declare class NgTable {
         columns: any[];
     };
     ngOnInit(): void;
-    clearColumnsSort(event: any): void;
+    clearColumnsSort(column: any): void;
     onChangeTable(column: any): void;
 }

@@ -76,7 +76,7 @@ export class NgTable {
         this.tableChanged.emit(null);
     }
 
-    clearColumnsSort(event) {
+    clearColumnsSort(column : any) {
 
         this.columns.forEach(
             (column) => {
