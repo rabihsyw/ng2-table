@@ -79,8 +79,12 @@ export class NgTable {
     clearColumnsSort(column : any) {
 
         this.columns.forEach(
-            (column) => {
-                column.sort = "";
+            (_column) => {
+
+                if (column.name != _column.name) {
+
+                    _column.sort = "";
+                }
             }
         );
     }
