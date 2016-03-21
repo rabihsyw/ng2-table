@@ -5,7 +5,7 @@ import {FORM_DIRECTIVES, CORE_DIRECTIVES, NgClass} from 'angular2/common';
     {
         selector : '[ngTableSorting]',
         inputs   : [ 'config: ngTableSorting', 'column' ],
-        outputs  : [ 'sortChanged' ],
+        outputs  : [ 'sortChanged', 'clearSort' ],
         host     : {
             '(click)' : 'onToggleSort($event, $target)'
         }
